@@ -1,6 +1,6 @@
 | Option | Description |
 | ------ | ----------- |
 | Airbnb project | The clone of the airbnb websit using python |
-| How to start | To start, we start frothe cmdm |
-| How to use it  | To use , do the following 
+| command interpreter | How to start, How to use it |
+|Tests | All tests were made to pass in non-interactive mode: $ echo "python3 -m unittest discover tests" | bash |
 | Examples  | See the following examples |
