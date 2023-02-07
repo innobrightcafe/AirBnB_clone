@@ -9,22 +9,33 @@ import time
 class BaseModel:
     def __init__(self):
         self.id = str(uuid.uuid4())
+        self.name = None
+        self.my_number = None
         self.created_at = datetime.datetime.now()
         self.updated_at = None
+        self.dict = {}
     
     def __str__(self):
-        return f"{type(self.id)} {self.id} {self.__dict__}"
+        return f"{type(self.id)} {self.id} {self.dict}"
     
     def save(self):
         self.updated_at = datetime.datetime.now()
     
     def to_dict(self):
-        pass
+        self.dict["my_number"] = self.my_number
+        self.dict["name"] = self.name
+        self.dict["updated_at"] = self.updated_at
+        self.dict["id"] = self.id
+        self.dict["created_at"] = self.created_at
+        return self.dict
 
 
-for user in range(6):
+for user in range(1):
     user = BaseModel()
-    print(user.id)
-    user.save()
+    user.name = "My First Model"
+    user.my_number = 89
+    x = user.to_dict()
     print(user)
-    print("=================")
+    print("======================================================")
+    print(x)
+    print("======================================================")
