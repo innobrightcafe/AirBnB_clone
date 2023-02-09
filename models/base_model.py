@@ -7,7 +7,9 @@ import time
 
 """create a class Base"""
 class BaseModel:
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
+        for item, value in kwargs.items():
+            self.item = self.value
         self.my_number = ""
         self.name = ""
         self.id = str(uuid.uuid4())
