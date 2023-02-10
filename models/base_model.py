@@ -7,11 +7,12 @@ import time
 
 """create a class Base"""
 class BaseModel:
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
+        self.data = kwargs
         self.my_number = ""
         self.name = ""
         self.id = str(uuid.uuid4())
-        self.created_at = str(datetime.datetime.now())
+        self.created_at = datetime.datetime.now()
         self.updated_at = ""
     
     def __str__(self):
