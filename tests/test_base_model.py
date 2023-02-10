@@ -4,7 +4,7 @@
 import unittest
 import sys
 
-sys.path.append('../../models')
+sys.path.append('../models')
 import base_model
 class TestBaseModel(unittest.TestCase):
     """ Suite to test Base class """
