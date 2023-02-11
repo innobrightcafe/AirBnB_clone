@@ -23,5 +23,5 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(x.__dict__["__class__"], "BaseModel")
         self.assertEqual(type(x.__dict__), dict)
 
-if __name__ == "__main__":
-    unittest.main()
+# if __name__ == "__main__":
+    # unittest.main()
