@@ -12,13 +12,16 @@ class FileStorage:
     __objects = {}
 
     def all(self):
-        pass
+        return self.__objects
 
     def new(self, obj):
-        pass
+        self.__objects[obj.id] = obj
 
     def save(self):
-        pass
+        if os.path.exits(self.__path):
+            with open(self.__path + "/file.json", "a") as file:
+                files = json.dumps(self.__objects, indent=4)
+                file.write(files)
 
     def reload(self):
         pass
