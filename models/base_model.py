@@ -28,4 +28,3 @@ class BaseModel:
         self.__dict__["id"] = self.id
         self.__dict__["created_at"] = self.created_at
         return self.__dict__
-
