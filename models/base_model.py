@@ -3,9 +3,8 @@
 """import modules"""
 import uuid
 import datetime
-import time
 
-"""create a class Base"""
+"""create a class BaseModel"""
 class BaseModel:
     def __init__(self, *args, **kwargs):
         self.data = kwargs
