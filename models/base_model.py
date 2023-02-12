@@ -3,6 +3,8 @@
 """import modules"""
 import uuid
 import datetime
+from __init__ import storage
+
 
 """create a class BaseModel"""
 
@@ -15,12 +17,15 @@ class BaseModel:
         self.id = str(uuid.uuid4())
         self.created_at = datetime.datetime.now()
         self.updated_at = ""
+        if self.__dict__ not in storage.all():
+            storage.new(self)
 
     def __str__(self):
         return f"{[self.__class__.__name__]} ({self.id}) {self.__dict__}"
 
     def save(self):
         self.updated_at = str(datetime.datetime.now())
+        storage.save()
 
     def to_dict(self):
         self.__dict__["my_number"] = self.my_number
