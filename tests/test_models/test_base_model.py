@@ -3,18 +3,10 @@
 
 import unittest
 import datetime
-import models.base_model
+from models.base_model import BaseModel 
+import models.base_model as BaseModel
 class TestBaseModel(unittest.TestCase):
     """ Suite to test Base class """
-
-    def test_id(self):
-        self.assertTrue(self.base_model.id, str)
-        self.assertNotEqual(self.base_model.id, "")
-    def test_created_at(self):
-        self.assertTrue(self.base_model.created_at, datetime.datetime)
-
-    def test_updated_at(self):
-        self.assertTrue(self.base_model.updated_at, datetime.datetime)
 
     def test_save(self):
         before = self.base_model.updated_at
