@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 import cmd
 
+
 class HBNBCommand(cmd.Cmd):
     """Simple command processor."""
     intro = "welcome to the console"
     prompt = "(hbnb)"
     x = "Quit command to exit the program"
-    
+
     def do_EOF(self, line):
         return True
 
@@ -24,6 +25,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, line):
         return True
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
