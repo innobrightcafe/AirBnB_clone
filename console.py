@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 import cmd
+import sys, os
 
+file = sys.path.append("../models")
+from models.base_model import BaseModel
 
 class HBNBCommand(cmd.Cmd):
     """Simple command processor."""
@@ -26,6 +29,10 @@ class HBNBCommand(cmd.Cmd):
     def do_quit(self, line):
         return True
 
+    def do_create(self, line):
+        """create a new instance of basemodel"""
+        lines = BaseModel()
+        print(lines.id)
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

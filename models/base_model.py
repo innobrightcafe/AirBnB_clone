@@ -3,11 +3,10 @@
 """import modules"""
 import uuid
 import datetime
+
 from __init__ import storage
 
-
 """create a class BaseModel"""
-
 
 class BaseModel:
     def __init__(self, *args, **kwargs):
