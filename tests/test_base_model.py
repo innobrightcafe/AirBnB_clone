@@ -2,16 +2,10 @@
 """ Module for test Base class """
 
 import unittest
-<<<<<<< HEAD
-import datetime
-from models.base_model import BaseModel 
-import models.base_model as BaseModel
-=======
 import sys
 
-sys.path.append('../../models')
+sys.path.append('../models')
 import base_model
->>>>>>> 2f60b2c065c57599965064506a199fb5017397ef
 class TestBaseModel(unittest.TestCase):
     """ Suite to test Base class """
 
@@ -29,5 +23,5 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual(x.__dict__["__class__"], "BaseModel")
         self.assertEqual(type(x.__dict__), dict)
 
-# if __name__ == "__main__":
-    # unittest.main()
+if __name__ == "__main__":
+    unittest.main()
