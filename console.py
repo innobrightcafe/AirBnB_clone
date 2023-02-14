@@ -1,8 +1,18 @@
 #!/usr/bin/python3
 import cmd
-import sys, os
+import sys
+import os
 
-file = sys.path.append("../models")
+dir = os.getcwd()
+folder1 = "engine"
+folder2 = "models"
+_path1 = os.path.join(dir, folder1)
+_path2 = os.path.join(dir, folder2)
+
+"""Include path to python system environment"""
+sys.path.append(_path1)
+sys.path.append(_path2)
+
 from models.base_model import BaseModel
 
 class HBNBCommand(cmd.Cmd):
@@ -31,8 +41,12 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, line):
         """create a new instance of basemodel"""
-        lines = BaseModel()
-        print(lines.id)
+        if line == "BaseModel":
+            lines = BaseModel()
+            lines.save()
+            print(lines.id)
+
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

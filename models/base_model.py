@@ -16,7 +16,13 @@ class BaseModel:
         self.id = str(uuid.uuid4())
         self.created_at = datetime.datetime.now()
         self.updated_at = ""
-        if self.__dict__ not in storage.all():
+
+        found = False
+        for item in storage.all():
+            if item == self.__dict__:
+                found = True
+                break
+        if not found:
             storage.new(self)
 
     def __str__(self):
