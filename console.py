@@ -45,6 +45,15 @@ class HBNBCommand(cmd.Cmd):
             lines = BaseModel()
             lines.save()
             print(lines.id)
+        elif line == "":
+            print("**class name missing**")
+        elif line == " ":
+            print("**class name missing**")
+        else:
+            print("**Type correct class name**")
+
+    def show(self):
+        pass
 
 
 
