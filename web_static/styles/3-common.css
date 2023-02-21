@@ -9,7 +9,7 @@ body{
     flex-direction: column;
 }
 .logo {
-    max-width: 10%;
+    max-width: 100%;
     width: 5%;
     object-fit: contain;
     vertical-align: middle;
