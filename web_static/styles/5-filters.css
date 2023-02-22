@@ -1,7 +1,7 @@
 .filters {
   -webkit-box-align: center !important;
   position: relative;
-  color: white;
+  color: rgb(34, 18, 18);
   height: 70px;
   width: 100%;
   border: 1px solid #DDDDDD;
@@ -31,12 +31,10 @@
   opacity: 90;
 }
 .amenities {
-  border-right: 1px solid #DDDDDD;
+  width: 25%;
 }
 .locations{
-  height: 100%;
   width: 25%;
-  border-right: 1px solid #DDDDDD;
 }
 h3{
   font-weight: 600;
