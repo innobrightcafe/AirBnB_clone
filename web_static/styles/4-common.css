@@ -29,6 +29,7 @@ body{
     width:650px;
     box-shadow:0 0 5px hsl(0 0% 78%);
     margin-top: 30px;
+    align-self: center;
   }
   
   .container div{
