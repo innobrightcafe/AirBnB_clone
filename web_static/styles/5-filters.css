@@ -19,7 +19,7 @@
   top: 50%;
   right: 30px;
   transform: translateY(-50%);
-  opacity: 1;
+  opacity: 90;
   transition: opacity 0.2s;
 }
 
