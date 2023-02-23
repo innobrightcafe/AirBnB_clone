@@ -52,8 +52,8 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("**Type correct class name**")
 
-    def show(self):
-        pass
+    def show(self, line):
+        if line == 
 
 
 
