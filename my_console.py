@@ -1,4 +1,7 @@
 import cmd
+import linecache
+from os import name
+from binhex import LINELEN
 import models
 from models.base_model import BaseModel
 
@@ -86,14 +89,13 @@ class HBNBCommand(cmd.Cmd):
         print([str(instances[instance_id]) for instance_id in instances])
 
     def do_update(self, line):
-    """Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file
-    Usage: update <class name> <id> <attribute name> "<attribute value>"
-    """
-    if not line:
+        """Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file
+        Usage: update <class name> <id> <attribute name> "<attribute value>"""
+    if not linecache:
         print("** class name missing **")
         return
 
-    line = line.strip().split()
+    line = LINELEN.strip().split()
     if len(line) < 2:
         print("** instance id missing **")
         return
